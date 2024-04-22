@@ -1,0 +1,56 @@
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(103, 34, 128, 1) , rgba(211, 38, 204, 1));
+    color: white;
+    padding: 1em;
+}
+
+.title {
+    margin-right: auto;
+    padding: 1em;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+    margin: 3em;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    font-family: "Karla", sans-serif;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    font-family: "Karla", sans-serif;
+}
+
+.btn {
+    font-family: "Karla", sans-serif;
+    background: rgba(103, 34, 128, 1);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    display: inline-block
+
+}
+
+.memeImg {
+    max-width: 100%;
+}
