@@ -1,5 +1,6 @@
 import React from "react"
 import memesData from "../memesData.js"
+import Form from "./form.jsx"
 
 function Meme() {
 
@@ -20,18 +21,13 @@ function Meme() {
 
     return (
         <main>
-            <div className="form">
-                <div className="top">
-                    <label>Top text</label>
-                    <input type="text" name="top"></input>
-                </div>
-                <div className="bottom">
-                    <label>Bottom text</label>
-                    <input type="text" name="bottom"></input>
-                </div>
-                <button className="btn" onClick={getMemeImage}>Get a new meme image</button>
+            <Form />
+            <div>
+            <button className="btn" onClick={getMemeImage} aria-label="Get a new meme image.">Get a new meme image</button>
             </div>
-            <img className="memeImg" src = {meme.image} />
+            <div>
+            <img className="memeImg" src = {meme.image} alt={meme.image ? "meme image" : ""}/>
+            </div>
         </main>
     )
 }

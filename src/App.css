@@ -6,8 +6,7 @@ body {
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(to right, rgba(103, 34, 128, 1) , rgba(211, 38, 204, 1));
+    background: linear-gradient(to right, rgb(205, 32, 119) , rgb(231, 131, 174));
     color: white;
     padding: 1em;
 }
@@ -23,9 +22,9 @@ body {
 
 .form {
     display: grid;
-    grid-template: 40px 40px / 1fr 1fr;
-    gap: 17px;
-    margin: 3em;
+    grid-template: 40px / 1fr 1fr;
+    gap: 1.5em;
+    margin: 1.5em;
 }
 
 .top {
@@ -42,13 +41,12 @@ body {
 
 .btn {
     font-family: "Karla", sans-serif;
-    background: rgba(103, 34, 128, 1);
+    background: rgb(197, 68, 126);
     color: white;
-    border-radius: 5px;
+    border: none;
+    margin: 1em;
+    padding: 1em;
     cursor: pointer;
-    width: auto;
-    display: inline-block
-
 }
 
 .memeImg {
