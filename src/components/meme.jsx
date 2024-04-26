@@ -1,6 +1,5 @@
 import React from "react"
 import memesData from "../memesData.js"
-import Form from "./form.jsx"
 
 function Meme() {
 
@@ -18,15 +17,49 @@ function Meme() {
             image: memesArray[randomNumber].url
         }))
     }
+    function handleChange(event) {
+        const {name, value} = event.target
+        setMeme(prevMeme => ({
+                ...prevMeme,
+                [name]: value
+            
+        }))
+    }
+
+    const id = React.useId()
 
     return (
         <main>
-            <Form />
-            <div>
-            <button className="btn" onClick={getMemeImage} aria-label="Get a new meme image.">Get a new meme image</button>
+            <div className="form">
+                <div className="input">
+                    <label htmlFor={id + "-topText"}>Top Text</label>
+                    <input
+                        id={id + "-topText"}
+                        type="text"
+                        onChange={handleChange}
+                        name="topText"
+                        value={meme.topText}
+                    />
+                </div>
+                <div className="input">
+                    <label htmlFor={id + "-bottomText"}>Bottom Text</label>
+                    <input
+                        id={id + "-bottomText"}
+                        className="bottom"
+                        type="text"
+                        onChange={handleChange}
+                        name="bottomText"
+                        value={meme.bottomText}
+                    />
+                </div>
+                <div>
+                    <button className="btn" onClick={getMemeImage} aria-label="Get a new meme image.">Get a new meme image</button>
+                </div>
             </div>
-            <div>
-            <img className="memeImg" src = {meme.image} alt={meme.image ? "meme image" : ""}/>
+            <div className="meme">
+                <img className="memeImg" src = {meme.image} alt={meme.image && "meme image"}/>
+                <h2 className="meme-text top">{meme.topText}</h2>
+                <h2 className="meme-text bottom">{meme.bottomText}</h2>
             </div>
         </main>
     )
