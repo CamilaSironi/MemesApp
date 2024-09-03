@@ -2,10 +2,12 @@ import logo from "../img/troll.png"
 
 function Header() {
     return(
-        <section className="header">
-            <img className="logo" alt="troll-face" src={logo}/>
+        <div className="header">
+            <div className="logo">
+                <img alt="troll-face" src={logo}/>
+            </div>
             <h2 className="title">Meme Generator</h2>
-        </section>
+        </div>
     )
 }
 
